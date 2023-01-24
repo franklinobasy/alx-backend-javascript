@@ -26,7 +26,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 **Install NodeJS 12.11.x**
 (in your home directory):
 
-```
+```bash
 curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
 sudo bash nodesource_setup.sh
 sudo apt install nodejs -y
@@ -49,7 +49,7 @@ in your project directory:
 ## Configuration files
 `**package.json**`
 
-```
+```json
 {
   "scripts": {
     "lint": "./node_modules/.bin/eslint",
@@ -73,7 +73,7 @@ in your project directory:
 
 **`babel.config.js`**
 
-```
+```javascript
 module.exports = {
   presets: [
     [
@@ -91,7 +91,7 @@ module.exports = {
 **`utils.js`**
 Use when you get to tasks requiring `uploadPhoto` and `createUser`.
 
-```
+```javascript
 export function uploadPhoto() {
   return Promise.resolve({
     status: 200,
@@ -110,7 +110,7 @@ export function createUser() {
 
 **`.eslintrc.js`**
 
-```
+```javascript
 module.exports = {
   env: {
     browser: false,
@@ -155,7 +155,7 @@ Don’t forget to run $ `npm install` when you have the `package.json`
 
 `uploadPhoto` returns a response with the format
 
-```
+```json
 {
   status: 200,
   body: 'photo-profile-1',
@@ -164,7 +164,7 @@ Don’t forget to run $ `npm install` when you have the `package.json`
 
 `createUser` returns a response with the format
 
-```
+```json
 {
   firstName: 'Guillaume',
   lastName: 'Salva',
@@ -196,7 +196,7 @@ solution - [0-promise.js](./0-promise.js)
 
 Using the prototype below, return a `promise`. The parameter is a `boolean`.
 
-```
+```javascript
 getFullResponseFromAPI(success)
 ```
 
@@ -235,7 +235,7 @@ solution - [1-promise.js](./1-promise.js)
 
 Using the function prototype below
 
-```
+```javascript
 function handleResponseFromAPI(promise)
 ```
 
@@ -268,7 +268,7 @@ In this file, import `uploadPhoto` and `createUser` from `utils.js`
 
 Knowing that the functions in `utils.js` return promises, use the prototype below to collectively resolve all promises and log `body firstName lastName` to the console.
 
-```
+```javascript
 function handleProfileSignup()
 ```
 
@@ -292,14 +292,14 @@ solution - [3-all.js](./3-all.js)
 
 Using the following prototype
 
-```
+```javascript
 function signUpUser(firstName, lastName) {
 }
 ```
 
 That returns a resolved promise with this object:
 
-```
+```json
 {
   firstName: value,
   lastName: value,
@@ -326,7 +326,7 @@ Write and export a function named `uploadPhoto`. It should accept one argument `
 
 The function should return a Promise rejecting with an Error and the string `$fileName cannot be processed`
 
-```
+```javascript
 export default function uploadPhoto(filename) {
 
 }
@@ -355,7 +355,7 @@ Import `signUpUser` from `4-user-promise.js` and `uploadPhoto` from `5-photo-rej
 
 Write and export a function named `handleProfileSignup`. It should accept three arguments `firstName` (string), `lastName` (string), and `fileName` (string). The function should call the two other functions. When the promises are all settled it should return an array with the following structure:
 
-```
+```json
 [
     {
       status: status_of_the_promise,
@@ -385,7 +385,7 @@ Write and export a function named `loadBalancer`. It should accept two arguments
 
 The function should return the value returned by the promise that resolved the first.
 
-```
+```javascript
 export default function loadBalancer(chinaDownload, USDownload) {
 
 }
@@ -432,7 +432,7 @@ Write a function named `divideFunction` that will accept two arguments: `numerat
 
 When the `denominator` argument is equal to 0, the function should throw a new error with the message cannot `divide by 0`. Otherwise it should return the numerator divided by the denominator.
 
-```
+```javascript
 export default function divideFunction(numerator, denominator) {
 
 }
@@ -468,7 +468,7 @@ When the `mathFunction` function is executed, the value returned by the function
 
 Example:
 
-```
+```json
 [
   1000,
   'Guardrail was processed',
@@ -496,7 +496,7 @@ Import `uploadPhoto` and `createUser` from `utils.js`
 
 Write an async function named `asyncUploadUser` that will call these two functions and return an object with the following format:
 
-```
+```json
 {
   photo: response_from_uploadPhoto_function,
   user: response_from_createUser_function,
