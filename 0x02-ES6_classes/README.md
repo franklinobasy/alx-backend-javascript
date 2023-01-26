@@ -408,3 +408,33 @@ bob@dylan:~$
 
 solution - [7-airport.js](./7-airport.js)
 
+### 8. Primitive - Holberton Class
+
+Implement a class named HolbertonClass:
+
+- Constructor attributes:
+  - `size` (Number)
+  - `location` (String)
+
+- Each attribute must be stored in an “underscore” attribute version (ex: `name` is stored in `_name`)
+
+- When the class is cast into a `Number`, it should return the size.
+
+- When the class is cast into a `String`, it should return the location.
+
+```
+bob@dylan:~$ cat 8-main.js
+import HolbertonClass from "./8-hbtn_class.js";
+
+const hc = new HolbertonClass(12, "Mezzanine")
+console.log(Number(hc));
+console.log(String(hc));
+
+bob@dylan:~$ 
+bob@dylan:~$ npm run dev 8-main.js 
+12
+Mezzanine
+bob@dylan:~$
+```
+
+solution - [8-hbtn_class.js](./8-hbtn_class.js)
