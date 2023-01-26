@@ -379,3 +379,32 @@ bob@dylan:~$
 
 solution - [6-sky_high.js](./6-sky_high.js)
 
+### 7. Airport
+
+Implement a class named `Airport`:
+
+- Constructor attributes:
+  - `name` (String)
+  - `code` (String)
+
+- Each attribute must be stored in an “underscore” attribute version (ex: `name` is stored in `_name`)
+
+- The default string description of the class should return the airport `code` (example below).
+
+```
+bob@dylan:~$ cat 7-main.js
+import Airport from "./7-airport.js";
+
+const airportSF = new Airport('San Francisco Airport', 'SFO');
+console.log(airportSF);
+console.log(airportSF.toString());
+
+bob@dylan:~$ 
+bob@dylan:~$ npm run dev 7-main.js 
+Airport [SFO] { _name: 'San Francisco Airport', _code: 'SFO' }
+[object SFO]
+bob@dylan:~$
+```
+
+solution - [7-airport.js](./7-airport.js)
+
