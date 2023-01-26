@@ -65,7 +65,7 @@ in your project directory:
 ## Configuration files
 `**package.json**`
 
-```
+```json
 {
   "scripts": {
     "lint": "./node_modules/.bin/eslint",
@@ -89,7 +89,7 @@ in your project directory:
 
 **`babel.config.js`**
 
-```
+```javascript
 module.exports = {
   presets: [
     [
@@ -106,7 +106,7 @@ module.exports = {
 
 **`.eslintrc.js`**
 
-```
+```javascript
 module.exports = {
   env: {
     browser: false,
@@ -156,7 +156,7 @@ Modify:
 - function `taskFirst` to instantiate variables using `const`
 - function `taskNext` to instantiate variables using `let`
 
-```
+```javascript
 export function taskFirst() {
   var task = 'I prefer const when I can.';
   return task;
@@ -195,7 +195,7 @@ solution - [0-constants.js](./0-constants.js)
 
 Given what you’ve read about `var` and hoisting, modify the variables inside the function taskBlock so that the variables aren’t overwritten inside the conditional block.
 
-```
+```javascript
 export default function taskBlock(trueOrFalse) {
   var task = false;
   var task2 = true;
@@ -230,7 +230,7 @@ solution - [1-block-scoped.js](./1-block-scoped.js)
 
 Rewrite the following standard function to use ES6’s arrow syntax of the function `add` (it will be an anonymous function after)
 
-```
+```javascript
 export default function getNeighborhoodsList() {
   this.sanFranciscoNeighborhoods = ['SOMA', 'Union Square'];
 
@@ -265,7 +265,7 @@ Condense the internals of the following function to 1 line - without changing th
 
 _Hint_: The key here to define default parameter values for the function parameters.
 
-```
+```javascript
 export default function getSumOfHoods(initialNumber, expansion1989, expansion2019) {
   if (expansion1989 === undefined) {
     expansion1989 = 89;
@@ -301,7 +301,7 @@ solution - [3-default-parameter.js](./3-default-parameter.js)
 
 Modify the following function to return the number of arguments passed to it using the rest parameter syntax
 
-```
+```javascript
 export default function returnHowManyArguments() {
 
 }
@@ -337,7 +337,7 @@ solution - [4-rest-parameter.js](./4-rest-parameter.js)
 
 Using spread syntax, concatenate 2 arrays and each character of a string by modifying the function below. Your function body should be one line long.
 
-```
+```javascript
 export default function concatArrays(array1, array2, string) {
 }
 ```
@@ -367,7 +367,7 @@ solution - [5-spread-operator.js](./5-spread-operator.js)
 Rewrite the return statement to use a template literal so you can the substitute the variables you’ve defined.
 
 
-```
+```javascript
 export default function getSanFranciscoDescription() {
   const year = 2017;
   const budget = {
@@ -404,7 +404,7 @@ Notice how the keys and the variable names are the same?
 
 Modify the following function’s budget object to simply use the keyname instead.
 
-```
+```javascript
 export default function getBudgetObject(income, gdp, capita) {
   const budget = {
     income: income,
@@ -436,7 +436,7 @@ solution - [7-getBudgetObject.js](./7-getBudgetObject.js)
 
 Rewrite the `getBudgetForCurrentYear` function to use ES6 computed property names on the `budget` object
 
-```
+```javascript
 function getCurrentYear() {
   const date = new Date();
   return date.getFullYear();
@@ -473,7 +473,7 @@ solution - [8-getBudgetCurrentYear.js](./8-getBudgetCurrentYear.js)
 
 Rewrite getFullBudgetObject to use ES6 method properties in the fullBudget object
 
-```
+```javascript
 import getBudgetObject from './7-getBudgetObject.js';
 
 export default function getFullBudgetObject(income, gdp, capita) {
@@ -516,7 +516,7 @@ solution - [9-getFullBudget.js](./9-getFullBudget.js)
 
 Rewrite the function `appendToEachArrayValue` to use ES6’s `for...of` operator. And don’t forget that var is not ES6-friendly.
 
-```
+```javascript
 export default function appendToEachArrayValue(array, appendString) {
   for (var idx in array) {
     var value = array[idx];
@@ -547,7 +547,7 @@ solution - [10-loops.js](./10-loops.js)
 
 Write a function named `createEmployeesObject` that will receive two arguments:
 
-```
+```javascript
 departmentName (String)
 employees (Array of Strings)
 export default function createEmployeesObject(departmentName, employees) {
@@ -582,7 +582,7 @@ solution - [11-createEmployeesObject.js](./11-createEmployeesObject.js)
 
 Write a function named `createReportObject` whose parameter, `employeesList`, is the return value of the previous function `createEmployeesObject`.
 
-```
+```javascript
 export default function createReportObject(employeesList) {
 
 }
@@ -594,7 +594,7 @@ export default function createReportObject(employeesList) {
 
 The method property receives `employeesList` and returns the number of departments. I would suggest suggest thinking back to the ES6 method property syntax.
 
-```
+```json
 {
   allEmployees: {
      engineering: [
@@ -636,7 +636,7 @@ Write a function named `createIteratorObject`, that will take into argument a re
 
 This function will return an iterator to go through every employee in every department.
 
-```
+```javascript
 export default function createIteratorObject(report) {
 
 }
@@ -678,7 +678,7 @@ solution - [100-createIteratorObject.js](./100-createIteratorObject.js)
 
 Finally, write a function named `iterateThroughObject`. The function’s parameter `reportWithIterator` is the return value from createIteratorObject.
 
-```
+```javascript
 export default function iterateThroughObject(reportWithIterator) {
 
 }
@@ -686,7 +686,7 @@ export default function iterateThroughObject(reportWithIterator) {
 
 It should return every employee name in a string, separated by |
 
-```
+```json
 {
   allEmployees: {
      engineering: [
