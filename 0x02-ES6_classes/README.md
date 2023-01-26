@@ -240,3 +240,28 @@ bob@dylan:~$
 
 solution - [2-hbtn_course.js](./2-hbtn_course.js)
 
+### 3. Methods, static methods, computed methods names..... MONEY
+
+Implement a class named `Currency`:
+
+- -Constructor attributes:
+  - `code` (String)
+  - `name` (String)
+
+- Each attribute must be stored in an “underscore” attribute version (ex: `name` is stored in `_name`)
+- Implement a getter and setter for each attribute.
+- Implement a method named `displayFullCurrency` that will return the attributes in the following format `name (code)`.
+
+```
+bob@dylan:~$ cat 3-main.js
+import Currency from "./3-currency.js";
+
+const dollar = new Currency('$', 'Dollars');
+console.log(dollar.displayFullCurrency());
+
+bob@dylan:~$ 
+bob@dylan:~$ npm run dev 3-main.js 
+Dollars ($)
+bob@dylan:~$
+```
+
