@@ -7,6 +7,7 @@ class Building {
         );
       }
     }
+    this.sqft = sqft;
   }
 
   /**
