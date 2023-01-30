@@ -169,3 +169,6 @@ bob@dylan:~$ npm run dev 0-main.js
 ]
 bob@dylan:~$
 ```
+
+solution - [0-get_list_students.js](./0-get_list_students.js)
+
