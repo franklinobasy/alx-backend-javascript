@@ -1,6 +1,7 @@
 # 0x03. ES6 data manipulation
 | `JavaScript` | `ES6` |
 
+![](./images/meme4.jpg)
 ## Resources
 **Read or watch:**
 
