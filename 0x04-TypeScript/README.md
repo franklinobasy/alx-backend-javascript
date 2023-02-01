@@ -175,7 +175,7 @@ Add the possibility to add any attribute to the Object like `contract(boolean)` 
 
 Example:
 
-```
+```ts
 const teacher3: Teacher = {
   firstName: 'John',
   fullTimeEmployee: false,
@@ -195,3 +195,28 @@ console.log(teacher3);
 // location: "London"
 ```
 
+### 2. Extending the Teacher class
+
+Write an interface named `Directors` that extends `Teacher`. It requires an attribute named `numberOfReports(number)`
+
+Example:
+
+```ts
+const director1: Directors = {
+  firstName: 'John',
+  lastName: 'Doe',
+  location: 'London',
+  fullTimeEmployee: true,
+  numberOfReports: 17,
+};
+console.log(director1);
+```
+
+
+// should print
+// Object
+// firstName: "John"
+// fullTimeEmployee: true
+// lastName: "Doe"
+// location: "London"
+// numberOfReports: 17
