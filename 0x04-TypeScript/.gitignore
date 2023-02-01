@@ -1,2 +1,3 @@
-task_0/node_modules
+task_*/node_modules
+task_*/dist
 node_modules
