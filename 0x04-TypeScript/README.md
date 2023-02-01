@@ -311,3 +311,20 @@ executeWork(createEmployee(1000));
 Getting to director tasks
 ```
 
+### 7. String literal types
+
+Write a String literal type named `Subjects` allowing a variable to have the value `Math` or `History` only. Write a function named `teachClass`:
+
+- it takes `todayClass` as an argument
+- it will return the string `Teaching Math` if `todayClass` is `Math`
+- it will return the string `Teaching History` if `todayClass` is `History`
+
+Expected result:
+
+```
+teachClass('Math');
+Teaching Math
+teachClass('History');
+Teaching History
+```
+
